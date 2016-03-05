@@ -109,7 +109,7 @@ class FreeSMSAlert < Sensu::Handler
                  info['number']
                else
                  info['number'].gsub(/[^0-9]/, '')
-      end
+               end
       settings['free_sms_alert']['carrier_portal'].each do |carrier, address|
         mail_to = address.gsub(/%number%/, number) if info['carrier'] == carrier
       end
