@@ -16,13 +16,15 @@ notifications:
     on_failure: always
 script:
 - bundle exec rake default
+- gem build sensu-plugins-sms.gemspec
+- gem install sensu-plugins-sms-*.gem
 deploy:
   provider: rubygems
   api_key:
-    secure: g88clvcjJYzV7VwN66xBg05S7WeH5KLAuzk4kyprDDckbW34tYQT++lWTeAs2qWMY3aUMymVD4kNVNRmgmUG+fex3GhAWfw//7XSkit6VE4/Y4zlh/8l0OvE6flg8EROMNFtgCEN5dUYGs6IabAXFYLnwA+I8Cz7OygXCoTBJbk=
+    secure: emNzdvl4s3VWDxC899GhnMp/dXuyPbw4mrRBck079tZMy/TXkcEzjBxMeqg/TxRNUD4JGIgY2vShZoqD5olOUykWUjGu65L5Tr84TqxtkrEnyyc+lkVREZNapxaJy5D3umHcSxUrzMY7ARR8d0u9KIgrjAhle8/QAjRHXKAG9DE=
   gem: sensu-plugins-sms
   on:
-    tags: true
+    ags: true
     all_branches: true
     rvm: 1.9.3
     rvm: 2.0
