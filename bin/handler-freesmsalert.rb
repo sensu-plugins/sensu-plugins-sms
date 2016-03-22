@@ -64,7 +64,7 @@ class FreeSMSAlert < Sensu::Handler
   # This method sends the acutal email
   #
   def send_sms(user_id, mail_to, mail_from)
-    mail_subject = "Alert:#{@event['check']['name']}"
+    mail_subject = "Alert:#{@event['check']['name']} #{@event['client']['name']}"
     mail_body = <<-BODY.gsub(/^\s+/, '')
       #{@event['check']['output']}
     BODY
