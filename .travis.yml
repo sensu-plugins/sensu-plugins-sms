@@ -24,7 +24,7 @@ deploy:
     secure: emNzdvl4s3VWDxC899GhnMp/dXuyPbw4mrRBck079tZMy/TXkcEzjBxMeqg/TxRNUD4JGIgY2vShZoqD5olOUykWUjGu65L5Tr84TqxtkrEnyyc+lkVREZNapxaJy5D3umHcSxUrzMY7ARR8d0u9KIgrjAhle8/QAjRHXKAG9DE=
   gem: sensu-plugins-sms
   on:
-    ags: true
+    tags: true
     all_branches: true
     rvm: 1.9.3
     rvm: 2.0
