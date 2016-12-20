@@ -83,10 +83,6 @@ class PlaysmsAlert < Sensu::Handler
 
   def handle
     Timeout.timeout 10 do
-      puts '=========='
-      puts settings['playsms']['recipients']
-      puts recipients
-      puts '=========='
       send_sms(recipients, msg)
       puts 'playsms -- sent alert for ' + short_name + ' to ' + recipients
     end
