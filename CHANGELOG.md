@@ -5,6 +5,10 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## Unreleased]
 
+## [0.0.4] - 2016-12-20
+### Changed
+- added playSMS handler
+
 ## [0.0.3] - 2016-03-17
 ### Changed
 - added client name to sms message
