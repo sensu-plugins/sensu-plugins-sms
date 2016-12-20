@@ -10,18 +10,22 @@
 
 ## Files
  * bin/check-sms
+ * bin/handler-playsms
  * bin/metrics-sms-bulk
  * bin/metrics-sms-if
  * bin/metrics-sms
 
+
 ## Usage
+
+### FreeSMS
 
 ```json
 {
   "free_sms_alert": {
     "carrier_portal": {
       // US carriers:
-      "att": "%number%@txt.att.net", 
+      "att": "%number%@txt.att.net",
       "verizon": "%number%@vtext.com",
       "tmobile": "%number%@tmomail.net",
       "sprint": "%number%@messaging.sprintpcs.com",
@@ -68,6 +72,46 @@
         "carrier": "tmobile",
         "number": "800-555-2368"
       }
+    }
+  }
+}
+```
+
+### playSMS
+
+Create a json config file with your host, API user, and API secret.
+
+```json
+{
+  "playsms": {
+    "host": "http://playsms.example.com",
+    "api_user": "sensu",
+    "api_secret": "XXXXX"
+  }
+}
+```
+
+Set your check to use the handler and define the playsms recipients.
+
+```json
+{
+  "checks": {
+    "check-disk-usage": {
+      "command": "check-disk-usage.rb -w :::disk.warning|80::: -c :::disk.critical|90:::",
+      "subscribers": [
+        "production"
+      ],
+      "handlers": [
+        "playsms"
+      ],
+      "playsms": {
+        "recipients": [
+          "1234567890",
+          "@joe_smith",
+          "#operations"
+        ]
+      },
+      "interval": 60,
     }
   }
 }
