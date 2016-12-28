@@ -1,6 +1,6 @@
 ## Sensu-Plugins-sms
 
-[ ![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-sms.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-sms)
+[![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-sms.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-sms)
 [![Gem Version](https://badge.fury.io/rb/sensu-plugins-sms.svg)](http://badge.fury.io/rb/sensu-plugins-sms)
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-sms/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-sms)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-sms/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-sms)
