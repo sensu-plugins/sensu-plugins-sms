@@ -5,13 +5,13 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## [Unreleased]
 
-## [0.0.4] - 2016-12-20
-### Changed
+### Added
 - added playSMS handler
-
-## [0.0.3] - 2016-03-17
-### Changed
 - added client name to sms message
+- Ruby 2.3.0 support
+
+### Removed
+- Ruby < 2.1 support
 
 ## [0.0.2] - 2015-07-14
 ### Changed
