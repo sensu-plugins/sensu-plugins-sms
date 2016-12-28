@@ -5,6 +5,7 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## [Unreleased]
 
+## [1.0.0] - 2016-12-27
 ### Added
 - added playSMS handler
 - added client name to sms message
@@ -21,5 +22,6 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ### Added
 - initial release
 
-[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-sms/compare/0.0.2...HEAD
+[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-sms/compare/1.0.0...HEAD
+[1.0.0]: https://github.com/sensu-plugins/sensu-plugins-sms/compare/0.0.2...1.0.0
 [0.0.2]: https://github.com/sensu-plugins/sensu-plugins-sms/compare/0.0.1...0.0.2
