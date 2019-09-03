@@ -11,6 +11,7 @@
 ## Files
  * bin/check-sms
  * bin/handler-playsms
+ * bin/handler-nexmo
  * bin/metrics-sms-bulk
  * bin/metrics-sms-if
  * bin/metrics-sms
@@ -109,6 +110,45 @@ Set your check to use the handler and define the playsms recipients.
           "1234567890",
           "@joe_smith",
           "#operations"
+        ]
+      },
+      "interval": 60,
+    }
+  }
+}
+```
+
+### Nexmo
+
+Create a json config file with your Nexmo API user, API secret and sender.
+
+```json
+{
+  "nexmo": {
+    "api_key": "nexmo",
+    "api_secret": "XXXXX",
+    "from": "SENSU"
+  }
+}
+```
+
+Set your check to use the handler and define the nexmo recipients.
+
+```json
+{
+  "checks": {
+    "check-disk-usage": {
+      "command": "check-disk-usage.rb -w :::disk.warning|80::: -c :::disk.critical|90:::",
+      "subscribers": [
+        "production"
+      ],
+      "handlers": [
+        "nexmo"
+      ],
+      "nexmo": {
+        "recipients": [
+          "1234567890",
+          "5556667778"
         ]
       },
       "interval": 60,
