@@ -42,10 +42,9 @@ class NexmoAlert < Sensu::Handler
       to: recipient,
       text: msg
     )
-    if response.messages.first.status != '0'
-      puts "Error: #{response.messages.first.error_text}"
-      exit 1
-    end
+    return if response.messages.first.status == '0'
+    puts "Error: #{response.messages.first.error_text}"
+    exit 1
   end
 
   def api_key
